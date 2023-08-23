@@ -26,3 +26,7 @@ $morse_code = {
   "-.--"  => "Y",
   "--.."  => "Z"
 }
+
+def decode_char(ch)
+  $morse_code[ch]
+end
