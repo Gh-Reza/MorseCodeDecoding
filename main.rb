@@ -36,3 +36,11 @@ def decode_word(word)
   word.split(" ").each { |ch| result << decode_char(ch) }
   result
 end
+
+def decode(str)
+  result = ""
+  str.split("  ").each { |word| result << decode_word(word) << " " }
+  result.strip
+end
+
+puts decode(".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
